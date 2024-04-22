@@ -4,7 +4,9 @@ export const Contact = () => {
   return (
     <section className="mt-72 mb-48 flex flex-col justify-center">
       <div className="container max-w-screen-md mx-auto">
-        <h2 className="text-4xl text-yellow-400 text-center">Get in touch</h2>
+        <h2 className="text-4xl text-yellow-400 text-center underline">
+          Get in touch
+        </h2>
         <p className="text-3xl text-center mt-28">
           We help you build your MVP in 14 days and grow it with a bi-weekly
           subscription.

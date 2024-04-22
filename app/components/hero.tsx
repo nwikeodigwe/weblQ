@@ -11,7 +11,9 @@ export const Hero = () => {
           <h1 className="text-6xl font-sans text-yellow-400">
             World-class product team for early-stage startups.
           </h1>
-          <h2 className="text-5xl underline">Bi-weekly subscription.</h2>
+          <h2 className="text-5xl font-semibold underline">
+            Bi-weekly subscription.
+          </h2>
           <h2 className="text-5xl">Cancel anytime</h2>
           <div className="flex items-center justify-between rounded-2xl border-[2px] border-white w-[500px] mt-2 p-3">
             <h2>WeblQ.dev</h2>

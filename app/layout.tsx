@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Anta, Jersey_10_Charted as Sans } from "next/font/google";
+import { Stick_No_Bills, Jersey_10_Charted as Sans } from "next/font/google";
 import "./globals.css";
+import { Contact } from "./components/contact";
+import { Footer } from "./components/footer";
+import { Header } from "./components/header";
 
-const anta = Anta({
+const stick = Stick_No_Bills({
   subsets: ["latin"],
   display: "swap",
-  weight: "400",
+  weight: "300",
 });
 
 const sans = Sans({
@@ -28,9 +31,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${anta.className} ${sans.variable} text-white bg-[#1b4d3e]`}
+        className={`${stick.className} ${sans.variable} text-white bg-[#1b4d3e]`}
       >
+        <Header />
         {children}
+        <Contact />
+        <Footer />
       </body>
     </html>
   );

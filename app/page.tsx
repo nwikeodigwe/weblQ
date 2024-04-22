@@ -13,7 +13,6 @@ import { Questions } from "./components/questions";
 export default function Home() {
   return (
     <main>
-      <Header />
       <Hero />
       <About />
       <Plan />
@@ -21,8 +20,6 @@ export default function Home() {
       <Why />
       <Pricing />
       <Questions />
-      <Contact />
-      <Footer />
     </main>
   );
 }
