@@ -4,12 +4,14 @@ import "./globals.css";
 
 const anta = Anta({
   subsets: ["latin"],
+  display: "swap",
   weight: "400",
 });
 
 const sans = Sans({
   subsets: ["latin"],
   weight: "400",
+  display: "swap",
   variable: "--font-sans",
 });
 

@@ -8,6 +8,7 @@ import { Why } from "./components/why";
 import { Pricing } from "./components/pricing";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
+import { Questions } from "./components/questions";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <How />
       <Why />
       <Pricing />
+      <Questions />
       <Contact />
       <Footer />
     </main>
