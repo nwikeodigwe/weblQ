@@ -4,7 +4,7 @@ import { LuPhoneCall } from "react-icons/lu";
 
 export const Pricing = () => {
   return (
-    <section className="my-72 flex flex-col justify-center">
+    <section className="my-72 flex flex-col justify-center" id="pricing">
       <div className="container max-w-screen-md mx-auto">
         <h2 className="text-4xl text-yellow-400 underline">Pricing</h2>
         <p className="text-3xl mt-72">

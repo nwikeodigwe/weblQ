@@ -1,12 +1,19 @@
+import { motion } from "framer-motion";
 import React from "react";
+import { element } from "./motion";
 
 export const Plan = () => {
   return (
     <section className="my-72 flex flex-col justify-center">
       <div className="container max-w-screen-md mx-auto">
-        <p className="text-3xl">
+        <motion.p
+          className="text-3xl"
+          variants={element}
+          initial="hidden"
+          animate="show"
+        >
           Strategy, design, prototype, code and deployment.
-        </p>
+        </motion.p>
       </div>
     </section>
   );
