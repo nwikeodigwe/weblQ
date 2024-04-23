@@ -32,6 +32,20 @@ export const tab = {
   },
 };
 
+export const backdrop = {
+  hidden: { y: -100, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.8, ease: easing },
+  },
+  exit: {
+    y: -100,
+    opacity: 0,
+    transition: { duration: 0.8, ease: easing },
+  },
+};
+
 export const button = {
   hidden: {
     opacity: 0,

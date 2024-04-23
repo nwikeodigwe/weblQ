@@ -47,7 +47,7 @@ export const Why = () => {
           variants={element}
         >
           <span className="underline font-medium">Affordable:</span> access a
-          dedicated product team for just 25% of the cost of an in-house team.
+          dedicated product team for just 20% of the cost of an in-house team.
         </motion.p>
         <motion.p
           className="text-md md:text-3xl mt-5 md:mt-16"
