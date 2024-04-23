@@ -57,7 +57,7 @@ export const Pricing = () => {
           $2,000 <span className="text-sm font-light">bi-weekly</span>
         </motion.p>
         <motion.p
-          className="text-md md:text-3xl md:mt-28 mt-10"
+          className="text-md md:text-3xl md:mt-5 mt-10"
           variants={element}
         >
           Senior full-stack developer, QA tester and product manager.
@@ -69,7 +69,7 @@ export const Pricing = () => {
           $4,000 <span className="text-sm font-light">bi-weekly</span>
         </motion.p>
         <motion.p
-          className="text-md md:text-3xl md:mt-28 mt-10"
+          className="text-md md:text-3xl md:mt-5 mt-10"
           variants={element}
         >
           Full product team.

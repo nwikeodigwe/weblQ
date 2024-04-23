@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${rajdhani.className} ${sans.variable} text-white bg-[#1b4d3e]`}
+        className={`${rajdhani.className} ${sans.variable} text-white bg-[#215e4c]`}
       >
         <Header />
         {children}
