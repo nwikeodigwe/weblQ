@@ -19,7 +19,7 @@ export const About = () => {
   }, [controls, inView]);
   return (
     <section
-      className="my-72 flex flex-col justify-center"
+      className="my-28 md:my-72 flex flex-col justify-center p-10"
       id="about"
       ref={ref}
     >
@@ -37,7 +37,7 @@ export const About = () => {
           },
         }}
       >
-        <motion.p className="text-3xl" variants={element}>
+        <motion.p className="text-md md:text-3xl" variants={element}>
           From idea to product launch, we handle it all, in as little as 2-4
           weeks.
         </motion.p>

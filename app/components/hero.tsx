@@ -29,7 +29,7 @@ export const Hero = () => {
     }
   }, [controls, inView]);
   return (
-    <section className={`${styles.background} h-screen`} ref={ref}>
+    <section className={`${styles.background} h-screen p-10`} ref={ref}>
       <div className="absolute inset-0 bg-green-900/50 backdrop-blur-sm"></div>
       <div className="relative container h-full mx-auto max-w-screen-md flex flex-col justify-center">
         <motion.div
@@ -47,42 +47,60 @@ export const Hero = () => {
           }}
         >
           <motion.h1
-            className="text-6xl font-sans text-yellow-400"
+            className="text-4xl text-center md:text-6xl md:text-left font-sans text-yellow-400"
             variants={element}
           >
             World-class product team for early-stage startups.
           </motion.h1>
           <motion.h2
-            className="text-5xl font-semibold underline"
+            className="text-2xl text-center md:text-left md:text-5xl font-semibold underline"
             variants={element}
           >
             Bi-weekly subscription.
           </motion.h2>
-          <motion.h2 className="text-5xl" variants={element}>
+          <motion.h2
+            className="text-2xl text-center md:text-left md:text-5xl"
+            variants={element}
+          >
             Cancel anytime
           </motion.h2>
           <motion.div
-            className="flex items-center justify-between rounded-2xl border-[2px] border-white w-[500px] mt-2 p-3"
+            className="flex items-center justify-between rounded-2xl border-[1px] md:border-[2px] border-white md:w-[500px] mt-2 p-2 md:p-3"
             variants={element}
           >
-            <motion.h2 variants={element}>WeblQ.dev</motion.h2>
-            <motion.p variants={element}>Let&apos;s get started</motion.p>
-            <Link href="https://tally.so/r/mRzD5l" target="_blank">
-              <motion.button variants={element}>Get Quote</motion.button>
-            </Link>
-            <motion.button
-              className="p-2 rounded-md bg-zinc-100 text-gray-900"
-              variants={button}
-              initial="hidden"
-              animate="visible"
-              whileHover="hover"
+            <motion.h2 variants={element} className="text-sm md:text-normal">
+              WeblQ.dev
+            </motion.h2>
+            <motion.p
+              className="text-sm md:text-normal hidden md:inline-block"
+              variants={element}
             >
-              Book a call
-            </motion.button>
+              Let&apos;s get started
+            </motion.p>
+            <Link href="https://tally.so/r/mRzD5l" target="_blank">
+              <motion.button
+                className="text-sm md:text-normal"
+                variants={element}
+              >
+                Get Quote
+              </motion.button>
+            </Link>
+
+            <Link href="https://calendly.com/weblq-pkzh" target="_blank">
+              <motion.button
+                className="p-1 rounded-md bg-zinc-100 text-gray-900 text-sm md:text-normal"
+                variants={button}
+                initial="hidden"
+                animate="visible"
+                whileHover="hover"
+              >
+                Book a call
+              </motion.button>
+            </Link>
           </motion.div>
           <div className="absolute bottom-10 left-0 w-full">
             <motion.ul
-              className="flex items-center justify-between text-xl"
+              className="hidden md:flex items-center justify-between text-xl"
               variants={element}
             >
               {list.map((li) => (

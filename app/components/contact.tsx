@@ -20,7 +20,7 @@ export const Contact = () => {
   }, [controls, inView]);
   return (
     <section
-      className="mt-72 mb-48 flex flex-col justify-center"
+      className="mt-28 md:mt-72 mb-24 md:mb-48 flex flex-col justify-center p-10"
       id="contact"
       ref={ref}
     >
@@ -39,19 +39,22 @@ export const Contact = () => {
         }}
       >
         <motion.h2
-          className="text-4xl text-yellow-400 text-center underline"
+          className="text-3xl md:text-4xl text-yellow-400 text-center underline"
           variants={element}
         >
           Get in touch
         </motion.h2>
-        <motion.p className="text-3xl text-center mt-28" variants={element}>
+        <motion.p
+          className="text-md md:text-3xl text-center mt-16 md:mt-28"
+          variants={element}
+        >
           We help you build your MVP in 14 days and grow it with a bi-weekly
           subscription.
         </motion.p>
-        <div className="flex items-center justify-center mt-28">
+        <div className="flex items-center justify-center mt-16 md:mt-28">
           <Link href="mailto:hey@weblq.dev">
             <motion.button
-              className="flex items-center text-3xl gap-4 py-3 px-4 rounded-full border-[2px] border-white"
+              className="flex items-center text-md md:text-3xl gap-4 py-2 px-3 md:py-3 md:px-4 rounded-full border-[2px] border-white"
               variants={button}
               initial="hidden"
               animate="visible"

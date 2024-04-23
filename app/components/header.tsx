@@ -35,13 +35,13 @@ export const Header = () => {
         }}
       >
         <div>
-          <motion.h2 className="text-2xl" variants={element}>
+          <motion.h2 className="text-md md:text-2xl" variants={element}>
             <Link href={"/"}>WeblQ.dev</Link>
           </motion.h2>
         </div>
         <Link href="https://tally.so/r/mRzD5l" target="_blank">
           <motion.button
-            className="px-4 py-2 rounded-3xl border-[2px] border-yellow-400 text-yellow-400"
+            className="md:px-4 md:py-2 px-2 py-1 rounded-3xl border-[2px] border-yellow-400 text-yellow-400 text-sm md:text-md"
             variants={element}
             whileHover={{
               scale: 1.1,

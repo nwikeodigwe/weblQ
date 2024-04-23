@@ -22,7 +22,7 @@ export default function Page() {
   }, [controls, inView]);
   return (
     <main>
-      <section className="my-48" ref={ref}>
+      <section className="my-16 md:my-48 p-10" ref={ref}>
         <motion.div
           className="container max-w-screen-md mx-auto"
           initial="hidden"
@@ -40,13 +40,13 @@ export default function Page() {
           <motion.h2 variants={element}>
             <Link
               href={"/"}
-              className="flex items-center gap-3 text-2xl hover:text-yellow-400 transition duration-200"
+              className="flex items-center gap-3 text-sm md:text-2xl hover:text-yellow-400 transition duration-200"
             >
               <IoReturnDownBackSharp /> back
             </Link>
           </motion.h2>
           <motion.h1
-            className="text-3xl text-yellow-400 underline mt-20"
+            className="text-3xl md:text-4xl text-yellow-400 underline mt-20"
             variants={element}
           >
             Frequently asked questions

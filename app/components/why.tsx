@@ -18,7 +18,10 @@ export const Why = () => {
     }
   }, [controls, inView]);
   return (
-    <section className="my-72 flex flex-col justify-center" ref={ref}>
+    <section
+      className="my-28 md:my-48 flex flex-col justify-center p-10"
+      ref={ref}
+    >
       <motion.div
         className="container max-w-screen-md mx-auto"
         initial="hidden"
@@ -34,25 +37,37 @@ export const Why = () => {
         }}
       >
         <motion.h2
-          className="text-4xl text-yellow-400 underline"
+          className="text-3xl md:text-4xl text-yellow-400 underline"
           variants={element}
         >
           Why choose us?
         </motion.h2>
-        <motion.p className="text-3xl mt-5" variants={element}>
+        <motion.p
+          className="text-md md:text-3xl mt-5 md:mt-16"
+          variants={element}
+        >
           <span className="underline font-medium">Affordable:</span> access a
           dedicated product team for just 25% of the cost of an in-house team.
         </motion.p>
-        <motion.p className="text-3xl mt-28" variants={element}>
+        <motion.p
+          className="text-md md:text-3xl mt-5 md:mt-16"
+          variants={element}
+        >
           <span className="underline font-medium">Flexible:</span> bi-weekly
           subscribtion with the freedom to cancel anytime.
         </motion.p>
-        <motion.p className="text-3xl mt-28" variants={element}>
+        <motion.p
+          className="text-md md:text-3xl mt-5 md:mt-16"
+          variants={element}
+        >
           <span className="underline font-medium">Experience:</span> with 8+
           years of experience in building startups, we specialize in turning
           ideas into high-quality web apps.
         </motion.p>
-        <motion.p className="text-3xl mt-28" variants={element}>
+        <motion.p
+          className="text-md md:text-3xl mt-5 md:mt-16"
+          variants={element}
+        >
           <span className="underline font-medium">Technology:</span> we use{" "}
           <span className="underline">Node JS</span>,{" "}
           <span className="underline">React</span>,{" "}
