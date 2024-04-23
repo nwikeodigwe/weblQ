@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Rajdhani, Jersey_10_Charted as Sans } from "next/font/google";
+import { Be_Vietnam_Pro, Jersey_10_Charted as Sans } from "next/font/google";
 import "./globals.css";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 
-const rajdhani = Rajdhani({
+const be_vietnam_pro = Be_Vietnam_Pro({
   subsets: ["latin"],
   display: "swap",
   weight: "400",
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${rajdhani.className} ${sans.variable} text-white bg-[#215e4c]`}
+        className={`${be_vietnam_pro.className} ${sans.variable} text-white bg-[#215e4c]`}
       >
         <Header />
         {children}

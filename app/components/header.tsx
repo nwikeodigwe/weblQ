@@ -35,7 +35,10 @@ export const Header = () => {
         }}
       >
         <div>
-          <motion.h2 className="text-md md:text-2xl" variants={element}>
+          <motion.h2
+            className="text-xl font-semibold md:text-2xl"
+            variants={element}
+          >
             <Link href={"/"}>WeblQ.dev</Link>
           </motion.h2>
         </div>
