@@ -1,23 +1,56 @@
-import { motion } from "framer-motion";
+"use client";
+import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
-import React from "react";
-import { element } from "./motion";
+import React, { useEffect } from "react";
+import { easing, element } from "../animation/motion";
+import { useInView } from "react-intersection-observer";
+import { IoIosLink } from "react-icons/io";
 
 export const Questions = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
   return (
-    <section className="my-72 flex flex-col justify-center">
-      <div className="container max-w-screen-md mx-auto">
-        <Link href={"/faq"}>
-          <motion.h2
-            className="text-4xl text-yellow-400 underline"
-            variants={element}
-            initial="hidden"
-            animate="show"
-          >
-            Have questions?
-          </motion.h2>
-        </Link>
-      </div>
+    <section className="my-72 flex flex-col justify-center" ref={ref}>
+      <motion.div
+        className="container max-w-screen-md mx-auto"
+        initial="hidden"
+        animate={controls}
+        variants={{
+          visible: {
+            transition: {
+              delayChildren: 0.5,
+              staggerChildren: 0.5,
+              easing,
+            },
+          },
+        }}
+      >
+        <motion.div variants={element}>
+          <Link href={"/faq"} className="flex items-center gap-3">
+            <h2 className="text-4xl text-yellow-400 underline">
+              Have questions?
+            </h2>
+
+            <span>
+              <IoIosLink className="text-3xl" />
+            </span>
+          </Link>
+        </motion.div>
+
+        <motion.p className="flex gap-2 mt-5 text-2xl" variants={element}>
+          See our frequently asked questions.
+        </motion.p>
+      </motion.div>
     </section>
   );
 };

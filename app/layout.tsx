@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Stick_No_Bills, Jersey_10_Charted as Sans } from "next/font/google";
+import { Rajdhani, Jersey_10_Charted as Sans } from "next/font/google";
 import "./globals.css";
 import { Contact } from "./components/contact";
 import { Footer } from "./components/footer";
 import { Header } from "./components/header";
 
-const stick = Stick_No_Bills({
+const rajdhani = Rajdhani({
   subsets: ["latin"],
   display: "swap",
-  weight: "300",
+  weight: "400",
 });
 
 const sans = Sans({
@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${stick.className} ${sans.variable} text-white bg-[#1b4d3e]`}
+        className={`${rajdhani.className} ${sans.variable} text-white bg-[#1b4d3e]`}
       >
         <Header />
         {children}

@@ -1,24 +1,58 @@
-import React from "react";
+"use client";
+import { motion, useAnimation } from "framer-motion";
+import React, { useEffect } from "react";
+import { easing, element } from "../animation/motion";
+import { useInView } from "react-intersection-observer";
 
 export const Why = () => {
+  const [ref, inView] = useInView({
+    triggerOnce: true,
+  });
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    } else {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
   return (
-    <section className="my-72 flex flex-col justify-center">
-      <div className="container max-w-screen-md mx-auto">
-        <h2 className="text-4xl text-yellow-400 underline">Why choose us?</h2>
-        <p className="text-3xl mt-72">
+    <section className="my-72 flex flex-col justify-center" ref={ref}>
+      <motion.div
+        className="container max-w-screen-md mx-auto"
+        initial="hidden"
+        animate={controls}
+        variants={{
+          visible: {
+            transition: {
+              delayChildren: 0.5,
+              staggerChildren: 0.5,
+              easing,
+            },
+          },
+        }}
+      >
+        <motion.h2
+          className="text-4xl text-yellow-400 underline"
+          variants={element}
+        >
+          Why choose us?
+        </motion.h2>
+        <motion.p className="text-3xl mt-5" variants={element}>
           <span className="underline font-medium">Affordable:</span> access a
           dedicated product team for just 25% of the cost of an in-house team.
-        </p>
-        <p className="text-3xl mt-72">
+        </motion.p>
+        <motion.p className="text-3xl mt-28" variants={element}>
           <span className="underline font-medium">Flexible:</span> bi-weekly
           subscribtion with the freedom to cancel anytime.
-        </p>
-        <p className="text-3xl mt-72">
+        </motion.p>
+        <motion.p className="text-3xl mt-28" variants={element}>
           <span className="underline font-medium">Experience:</span> with 8+
           years of experience in building startups, we specialize in turning
           ideas into high-quality web apps.
-        </p>
-        <p className="text-3xl mt-72">
+        </motion.p>
+        <motion.p className="text-3xl mt-28" variants={element}>
           <span className="underline font-medium">Technology:</span> we use{" "}
           <span className="underline">Node JS</span>,{" "}
           <span className="underline">React</span>,{" "}
@@ -28,8 +62,8 @@ export const Why = () => {
           <span className="underline">MongoDB</span> and{" "}
           <span className="underline">Sanity CMS</span> to build scalable,
           maintainable apps that integrate seamlessly with your existing tools.
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
     </section>
   );
 };
