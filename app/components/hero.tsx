@@ -30,7 +30,7 @@ export const Hero = () => {
   }, [controls, inView]);
   return (
     <section className={`${styles.background} h-screen p-10`} ref={ref}>
-      <div className="absolute inset-0 bg-green-900/50 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-green-900/50 backdrop-blur-sm h-full"></div>
       <div className="relative container h-full mx-auto max-w-screen-md flex flex-col justify-center">
         <motion.div
           className="flex flex-col gap-4 z-10"
