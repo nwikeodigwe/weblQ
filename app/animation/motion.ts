@@ -1,3 +1,5 @@
+import { exit } from "process";
+
 export const easing = [0.6, -0.05, 0.01, 0.99];
 
 export const container = {
@@ -15,6 +17,18 @@ export const element = {
     y: 0,
     opacity: 1,
     transition: { duration: 0.8 },
+  },
+};
+
+export const tab = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: { duration: 0.2 },
+  },
+  exit: {
+    y: -10,
+    opacity: 0,
   },
 };
 

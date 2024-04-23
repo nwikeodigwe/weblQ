@@ -22,7 +22,7 @@ export default function Page() {
   }, [controls, inView]);
   return (
     <main>
-      <section className="my-16 md:my-48 p-10" ref={ref}>
+      <section className="p-10" ref={ref}>
         <motion.div
           className="container max-w-screen-md mx-auto"
           initial="hidden"
@@ -40,7 +40,7 @@ export default function Page() {
           <motion.h2 variants={element}>
             <Link
               href={"/"}
-              className="flex items-center gap-3 text-sm md:text-2xl hover:text-yellow-400 transition duration-200"
+              className="flex items-center gap-3 text-sm md:text-2xl hover:text-yellow-400 transition duration-200 my-16 md:my-28"
             >
               <IoReturnDownBackSharp /> back
             </Link>
@@ -51,7 +51,7 @@ export default function Page() {
           >
             Frequently asked questions
           </motion.h1>
-          <motion.div className="mt-4" variants={element}>
+          <motion.div className="mt-16" variants={element}>
             <Tab title="Where are you based?">
               We are a remote team based in Europe and Central America. We work
               with clients from all over the world.

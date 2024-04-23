@@ -1,6 +1,8 @@
 "use client";
+import { motion, AnimatePresence } from "framer-motion";
 import React, { ReactNode, useState } from "react";
 import { IoMdAdd, IoMdRemove } from "react-icons/io";
+import { tab } from "../animation/motion";
 
 export const Tab = ({
   title,
@@ -25,15 +27,19 @@ export const Tab = ({
           )}
         </button>
       </div>
-      <p
-        className={`${
-          !active
-            ? "hidden"
-            : "text-md md:text-3xl text-gray-400 hover:text-gray-200 transition duration-200 font-light mt-3"
-        }`}
-      >
-        {children}
-      </p>
+      <AnimatePresence>
+        {active && (
+          <motion.p
+            className="text-md md:text-3xl text-gray-400 hover:text-gray-200 transition duration-200 font-light mt-3"
+            variants={tab}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+          >
+            {children}
+          </motion.p>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

@@ -2,7 +2,7 @@
 import { motion, useAnimation } from "framer-motion";
 import { FcConferenceCall } from "react-icons/fc";
 import { LuPhoneCall } from "react-icons/lu";
-import { button, easing, element } from "../animation/motion";
+import { easing, element } from "../animation/motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
 import Link from "next/link";
@@ -57,7 +57,7 @@ export const Pricing = () => {
           $2,000 <span className="text-sm font-light">bi-weekly</span>
         </motion.p>
         <motion.p
-          className="text-md md:text-3xl md:mt-5 mt-10"
+          className="text-md md:text-3xl md:mt-5 mt-3"
           variants={element}
         >
           Senior full-stack developer, QA tester and product manager.
@@ -69,7 +69,7 @@ export const Pricing = () => {
           $4,000 <span className="text-sm font-light">bi-weekly</span>
         </motion.p>
         <motion.p
-          className="text-md md:text-3xl md:mt-5 mt-10"
+          className="text-md md:text-3xl md:mt-5 mt-3"
           variants={element}
         >
           Full product team.
