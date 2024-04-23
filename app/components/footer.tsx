@@ -114,7 +114,7 @@ export const Footer = () => {
           All rights reserved, 2024
         </motion.p>
       </div>
-      <div className="hidden md:fixed bottom-0 left-10">
+      <div className="hidden md:block md:fixed bottom-0 left-10">
         <motion.ul
           className="flex flex-col gap-6 items-center justify-center text-gray-200"
           initial="hidden"
