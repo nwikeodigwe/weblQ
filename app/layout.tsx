@@ -19,8 +19,8 @@ const sans = Sans({
 });
 
 export const metadata: Metadata = {
-  title: "WebleQ Developers",
-  description: "Discover innovative web solutions with WebleQ",
+  title: "WeblQ Developers",
+  description: "Discover innovative web solutions with WeblQ",
 };
 
 export default function RootLayout({
